@@ -59,7 +59,7 @@ flip:
 	jp nz, flip
 
 	; Turn PPU on
-	ld a, LCDCF_ON | LCDCF_BGON | LCDCF_OBJON |LCDCF_BG8000 | LCDCF_OBJ16
+	ld a, LCDCF_ON | LCDCF_BGON | LCDCF_OBJON | LCDCF_BG8000 | LCDCF_OBJ16
 	ld [rLCDC], a
 	ld a, %11100100
 	ld [rBGP], a
@@ -95,5 +95,5 @@ char_tiles::
 .end:
 
 background_test_name::
-    db "obj_xb_xy_flip"
+    db "obj16_xb_xy_flip"
 .end

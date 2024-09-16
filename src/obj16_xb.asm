@@ -47,19 +47,8 @@ load_oam:
 	or a, d
 	jp nz, load_oam
 
-	; Flip tiles
-	ld d, $28
-	ld bc, 4
-	ld hl, $c103
-	ld a, $60
-flip:
-	ld [hl], a
-	add hl, bc
-	dec d
-	jp nz, flip
-
 	; Turn PPU on
-	ld a, LCDCF_ON | LCDCF_BGON | LCDCF_OBJON |LCDCF_BG8000 | LCDCF_OBJ16
+	ld a, LCDCF_ON | LCDCF_BGON | LCDCF_OBJON | LCDCF_BG8000 | LCDCF_OBJ16
 	ld [rLCDC], a
 	ld a, %11100100
 	ld [rBGP], a
@@ -95,5 +84,5 @@ char_tiles::
 .end:
 
 background_test_name::
-    db "obj_xb_xy_flip"
+    db "obj16_xb"
 .end

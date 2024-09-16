@@ -51,7 +51,7 @@ load_oam:
 	ld d, $28
 	ld bc, 4
 	ld hl, $c103
-	ld a, $60
+	ld a, $40
 flip:
 	ld [hl], a
 	add hl, bc
@@ -95,5 +95,5 @@ char_tiles::
 .end:
 
 background_test_name::
-    db "obj_xb_xy_flip"
+    db "obj16_yb_y_flip"
 .end
