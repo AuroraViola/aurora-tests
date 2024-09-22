@@ -95,5 +95,5 @@ char_tiles::
 .end:
 
 background_test_name::
-    db "obj16_yb_y_flip"
+    db "obj16_xb_y_flip"
 .end
